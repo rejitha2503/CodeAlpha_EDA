@@ -11,7 +11,7 @@ print("       BOOKS DATASET - EDA ANALYSIS")
 print("=" * 55)
 
 # ── 1. Data Structure ────────────────────────────
-print("\n📋 1. DATA STRUCTURE")
+print("\n 1. DATA STRUCTURE")
 print(f"   Rows    : {df.shape[0]}")
 print(f"   Columns : {df.shape[1]}")
 print(f"\n   Column Names & Data Types:")
@@ -24,7 +24,7 @@ print(f"\n   First 5 rows:")
 print(df.head())
 
 # ── 2. Meaningful Questions ──────────────────────
-print("\n❓ 2. MEANINGFUL QUESTIONS & ANSWERS")
+print("\n 2. MEANINGFUL QUESTIONS & ANSWERS")
 
 print(f"\n   Q1: Total books in dataset?")
 print(f"   A : {len(df)} books")
@@ -48,7 +48,7 @@ print(f"\n   Q6: Rating distribution?")
 print(df['Rating (1-5)'].value_counts().sort_index())
 
 # ── 3. Statistics ────────────────────────────────
-print("\n📊 3. STATISTICAL SUMMARY")
+print("\n 3. STATISTICAL SUMMARY")
 print(df[['Price (£)', 'Rating (1-5)']].describe())
 
 # ── 4. Visualizations ────────────────────────────
@@ -90,10 +90,10 @@ axes[1, 1].set_title('Rating Share (%)', fontweight='bold')
 plt.tight_layout()
 plt.savefig("eda_charts.png", dpi=150, bbox_inches='tight')
 plt.show()
-print("\n✅ Charts saved as 'eda_charts.png'")
+print("\n Charts saved as 'eda_charts.png'")
 
 # ── 5. Anomalies / Issues ────────────────────────
-print("\n⚠️  5. DATA ISSUES / ANOMALIES")
+print("\n  5. DATA ISSUES / ANOMALIES")
 print(f"   Duplicate titles  : {df['Title'].duplicated().sum()}")
 print(f"   Missing prices    : {df['Price (£)'].isnull().sum()}")
 print(f"   Missing ratings   : {df['Rating (1-5)'].isnull().sum()}")
